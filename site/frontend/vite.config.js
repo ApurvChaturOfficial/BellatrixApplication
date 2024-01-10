@@ -8,16 +8,26 @@ export default defineConfig({
   plugins: [
     react(),
     VitePWA({
-      manifest:  {
-        "name": "Bellatrix Enterprise",
-        "icons": [
+      manifest: {
+        "registerType": 'autoUpdate',
+        "name":"Bellatrix Enterprise",
+        "short_name":"Bellatrix",
+        "display": "standalone",
+        "background_color": "#35155D",
+        "theme_color": "#35155D",
+        "icons":[
           {
             src: "Business/Bellatrix/favicon_io/android-chrome-512x512.png",
             sizes: "512x512",
             type: "image/png",
-          }
+          },
+          {
+            src: "Business/Bellatrix/favicon_io/android-chrome-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
         ],
-      } 
+      }
     })
   ],
  
